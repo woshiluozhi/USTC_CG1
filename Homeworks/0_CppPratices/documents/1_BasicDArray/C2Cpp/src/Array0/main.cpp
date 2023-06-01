@@ -21,6 +21,7 @@ void main()
 	PrintArray();
 
 	FreeArray();
+	return 0;
 }
 
 int SetArraySize( int size )
@@ -44,7 +45,6 @@ int FreeArray()
 		pData = NULL;
 	}
 
-	return 1;
 }
 
 int SetValue( int k, double value )

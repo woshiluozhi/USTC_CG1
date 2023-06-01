@@ -2,6 +2,9 @@
 #ifndef _DYNAMICARRAY_H_
 #define _DYNAMICARRAY_H_
 
+#include <stdio.h>
+#include <stdlib.h>
+
 // interfaces of Dynamic Array class DArray
 class DArray {
 public:

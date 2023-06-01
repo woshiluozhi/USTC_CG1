@@ -9,10 +9,22 @@ DArray::DArray() {
 // set an array with default values
 DArray::DArray(int nSize, double dValue) {
 	//TODO
+	m_nSize = nSize;
+	for (int i = 0; i < m_nSize; i++)
+	{
+		m_pData[i] = dValue;
+	}
 }
 
 DArray::DArray(const DArray& arr) {
 	//TODO
+	m_nSize = arr.m_nSize;
+
+	m_pData = new double[m_nSize];
+	for (int i = 0; i < m_nSize; i++)
+	{
+		m_pData[i] = arr.m_pData[i];
+	}
 }
 
 // deconstructor
@@ -23,11 +35,28 @@ DArray::~DArray() {
 // display the elements of the array
 void DArray::Print() const {
 	//TODO
+	if (m_nSize == 0)
+	{
+		return 0;
+	}
+
+	if (m_pData == nullptr)
+	{
+		return 0;
+	}
+	
+	for (int i = 0; i < m_nSize; i++)
+	{
+		printf("%lf \n", m_pData[i]);
+	}
 }
 
 // initilize the array
 void DArray::Init() {
 	//TODO
+	m_nSize = 0;
+	m_pData = nullptr;
+	return 1;
 }
 
 // free the array
